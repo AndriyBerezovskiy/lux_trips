@@ -1,0 +1,155 @@
+@import '../../mixins';
+
+.pins_why__wrap{
+  position: absolute;
+  top: 36%;
+  height: 637px;
+  width: 1086px;
+  @include position_center(-48%, -50%);
+
+  @media (min-width: 992px) and (max-width: 1199.98px){
+    width: 896px;
+    left: 49%;
+  }
+
+  @media (min-width: 772px) and (max-width: 991.98px){
+    width: 728px;
+    left: 49%;
+  }
+
+  @media (min-width: 576px) and (max-width: 771.98px){
+    @include position_center(-50%, -42%);
+    width: 537px;
+  }
+
+  @media (max-width: 575.98px) {
+    @include position_center();
+    width: 283px;
+  }
+
+  .pins_why__1, .pins_why__2, .pins_why__3, .pins_why__4{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .pins_img__1, .pins_img__2, .pins_img__3, .pins_img__4{
+    position: absolute;
+    width: max-content;
+  }
+
+  .pins_why__1{
+    height: 348px;
+    width: 149px;
+
+    @media (max-width: 575.98px) {
+      top: 11%;
+      width: 126px;
+      height: 197px;
+    }
+
+    .pins_img__1{
+      left: -172px;
+
+      img{
+        width: 87%;
+      }
+    }
+  }
+
+  .pins_why__2{
+    top: 132px;
+    right: 230px;
+    height: 184px;
+    width: 82px;
+
+    @media (max-width: 991.98px){
+      display: none;
+    }
+
+    .pins_img__2{
+      left: -95px;
+
+      img{
+        width: 94%;
+      }
+    }
+  }
+
+  .pins_why__3{
+    right: 0;
+    bottom: 0;
+    height: 365px;
+    width: 161px;
+
+    @media (min-width: 775px) and (max-width: 991.98px){
+      bottom: 31%;
+    }
+
+    @media (min-width: 400px) and (max-width: 575.98px) {
+      width: 126px;
+      height: 249px;
+      bottom: 13%;
+    }
+
+    @media (min-width: 320px) and (max-width: 399.98px){
+      width: 126px;
+      height: 225px;
+      bottom: 19%;
+    }
+
+    .pins_img__3{
+      bottom: -15px;
+      left: -174px;
+
+      @media (min-width: 400px) and (max-width: 575.98px) {
+        bottom: -113px;
+        left: -234px;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px){
+        bottom: -140px;
+      }
+    }
+  }
+
+  .pins_why__4{
+    height: 639px;
+    width: 275px;
+    bottom: -133%;
+
+    @media (min-width: 1441px) and (max-width: 1920px){
+      bottom: -150%;
+    }
+
+    @media (min-width: 775px) and (max-width: 991.98px){
+      bottom: -114%;
+    }
+
+    @media (max-width: 774.98px){
+      bottom: -104%;
+      height: 493px;
+      width: 221px;
+    }
+
+    @media (min-width: 400px) and (max-width: 575.98px) {
+      left: -16%;
+      width: 169px;
+    }
+
+    @media (min-width: 320px) and (max-width: 399.98px){
+      left: -14px;
+      bottom: -108%;
+      height: 518px;
+      width: 154px;
+    }
+
+    .pins_img__4{
+      left: -61%;
+
+      @media (max-width: 575.98px) {
+        left: -160%;
+      }
+    }
+  }
+}

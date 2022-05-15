@@ -1,0 +1,46 @@
+@import '../../mixins';
+
+.decor3{
+  position: absolute;
+  top: -58%;
+  left: 47%;
+
+  & svg{
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-80%, 114%);
+  }
+
+  & span{
+    display: block;
+    vertical-align: middle;
+  }
+
+  & ::before,
+  & ::after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    width: 98px;
+    height: 63px;
+  }
+
+  & ::before {
+    top: 65px;
+    margin-left: -100px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    position: absolute;
+    border-radius: 24px 0 0 0;
+    @include position_center(-49%, -60%);
+  }
+
+  & ::after {
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 0 24px 0 0;
+    @include position_center(69%, 40%);
+  }
+}

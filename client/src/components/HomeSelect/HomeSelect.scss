@@ -1,0 +1,262 @@
+.home_select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-left: 23px;
+
+  .destination, .travel_type, .calendar, .travellers {
+    display: inline-block;
+    width: 204px;
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      width: 165px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      width: fit-content;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 91%;
+    }
+
+    & h5 {
+      display: flex;
+      align-items: center;
+      font-family: 'Manrope', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      margin-left: 12px;
+      line-height: 25px;
+      color: #79655E;
+    }
+
+    & h5::before {
+      content: '';
+      display: inline-block;
+      margin: 0 5px 0 -23px;
+      height: 18px;
+      width: 17px;
+      background-image: url('../../images/icon/icon_destination.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  .destination{
+    & h5::before{
+      width: 11px;
+    }
+  }
+
+  .travel_type {
+    & h5::before {
+      background-image: url('../../images/icon/icon_travel.svg');
+    }
+  }
+
+  .calendar {
+
+    & h5::before {
+      background-image: url('../../images/icon/icon_calendar.svg');
+      height: 15px;
+    }
+
+// react-datepicker start
+
+    .react-datepicker {
+
+      &__input-container {
+        height: 36px;
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          width: 103px;
+        }
+
+
+        & input {
+          height: 100%;
+          width: 100%;
+          font-size: 16px;
+          border: none;
+          border-top: 1px solid #79655E;
+          border-radius: 5px;
+          padding-left: 5px;
+          color: #333333;
+          cursor: pointer;
+          outline: none;
+        }
+
+        & input[class='react-datepicker-ignore-onclickoutside'] {
+          border: none;
+          border-bottom: 1px solid #79655E;
+          font-family: 'Manrope', sans-serif;
+          font-weight: 500;
+          color: #000;
+        }
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      width: 40%;
+    }
+  }
+
+// react-datepicker end
+
+  .travellers {
+
+    & h5::before {
+      background-image: url('../../images/icon/icon_travellers.svg');
+      height: 13px;
+    }
+
+    @media (max-width: 767.98px) {
+      width: 40%;
+    }
+  }
+
+  .search_button {
+    height: 70px;
+    width: 126px;
+
+    button {
+      height: 100%;
+      width: 100%;
+      background-color: #0C0B10;
+      border-radius: 121px;
+
+      &:hover{
+        transform: scale(1.1);
+        transition: .5s ease-out;
+      }
+
+      span {
+        display: block;
+        position: relative;
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        transform: translate(10%, 0);
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          color: transparent;
+        }
+
+        @media (max-width: 767.98px) {
+          display: inline-block;
+          margin-left: 30px;
+        }
+
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          top: 3px;
+          left: 8px;
+          height: 24px;
+          width: 24px;
+          background-image: url('../../images/icon/icon_search.svg');
+          background-repeat: no-repeat;
+
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            left: 19px;
+          }
+
+          @media (max-width: 767.98px) {
+            left: -30px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      height: 60px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      height: 55px;
+      width: 81px;
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      width: 80%;
+    }
+
+    @media (max-width: 575.98px) {
+      height: 60px;
+      width: 91%;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    height: 95%;
+  }
+
+  @media (max-width: 575.98px) {
+    margin-top: 16px;
+    column-gap: 10px;
+  }
+}
+
+// react-select start
+
+.custom_select {
+
+  &__control {
+    background-color: transparent !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-top: 1px solid #79655E !important;
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      width: 130px !important;
+    }
+
+    &--menu-is-open {
+      border: none !important;
+      border-bottom: 1px solid #79655E !important;
+    }
+  }
+
+  &__indicator {
+    cursor: pointer !important;
+  }
+
+  &__value-container {
+    cursor: text !important;
+
+    &--has-value {
+      font-family: 'Manrope', sans-serif !important;
+      font-weight: 500 !important;
+      color: #000 !important;
+    }
+  }
+
+  &__menu {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+  }
+
+  &__option {
+    cursor: pointer !important;
+
+    &--is-focused{
+      color: #fff !important;
+      background-color: #bbafaf !important;
+    }
+  }
+}
+
+// react-select end

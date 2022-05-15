@@ -1,0 +1,162 @@
+@import '../../mixins';
+
+.service {
+  height: 431px;
+
+  @media (max-width: 991.98px) {
+    position: relative;
+    top: -594px;
+  }
+
+  .service_content {
+    width: 1110px;
+    margin: 0 auto;
+
+    @media (max-width: 1199.98px) {
+      width: 100vw;
+    }
+
+    .service_text{
+      display: none;
+
+      @media (max-width: 991.98px) {
+        display: block;
+        position: absolute;
+        @include position_center();
+      }
+
+      h2{
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+        color: #0C0B10;
+      }
+    }
+
+    ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 450px;
+      top: 100px;
+      gap: 30px;
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        gap: 13px;
+      }
+
+      li {
+        position: relative;
+        height: 191px;
+        width: 530px;
+        margin: 0 5px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px;
+
+        &:hover{
+          transform: scale(1.04);
+          transition: .4s ease-in;
+        }
+
+        .img_service{
+          width: 100%;
+        }
+
+        img{
+          position: relative;
+          max-width: none;
+          height: 100%;
+        }
+
+        .supercars {
+          @include position_center(-50%, -38%);
+
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            @include position_center(-52%, -38%);
+          }
+        }
+
+        .hotels{
+          @include position_center(-54%, -43%);
+        }
+
+        .villas{
+          @include position_center(-50%, 0);
+
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            @include position_center(-40%, 0);
+          }
+        }
+
+        .yachts{
+          @include position_center(-53%, -50%);
+
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            @include position_center(-65%, -50%);
+          }
+        }
+
+        .private_helicopter{
+          @include position_center(-52%, -23%);
+        }
+
+        .private_jet{
+          @include position_center(-50%, -11%);
+        }
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          width: 460px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          width: 370px;
+        }
+
+        h3{
+          position: absolute;
+          top: 50%;
+          width: 241px;
+          font-family: 'Forum', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 44px;
+          text-align: center;
+          line-height: 98.5%;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          z-index: 2;
+          @include position_center();
+        }
+
+        svg{
+          position: absolute;
+          top: 50%;
+          @include position_center();
+        }
+
+        .service_decor1{
+          position: absolute;
+          height: 53px;
+          width: 70px;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%) rotate(155deg);
+
+          .service_decor2{
+            height: inherit;
+            background: rgba(145, 145, 145, 0.14);
+            backdrop-filter: blur(20px);
+            transform: skew(38deg, -1deg);
+          }
+        }
+      }
+    }
+  }
+}

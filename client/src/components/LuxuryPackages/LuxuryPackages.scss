@@ -1,0 +1,307 @@
+@import '../../mixins';
+
+.luxury_packages{
+  position: relative;
+  height: 1850px;
+  background-size: cover !important;
+  background: url('../../images/picture/bg_luxury_pacakges.png') no-repeat;
+
+  .bg_image{
+    position: absolute;
+    bottom: -165px;
+    height: 981px;
+    width: 100%;
+    background-size: cover !important;
+    background: url('../../images/picture/bg_book with us.png') no-repeat;
+
+    @media (max-width: 991.98px) {
+      bottom: 145px;
+    }
+  }
+
+  .luxury_wrap{
+    position: absolute;
+    left: 160px;
+    bottom: 0;
+    height: 1483px;
+    width: 1090px;
+
+    @media (max-width: 1270px) {
+      left: 45px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1269.98px) {
+      left: 33px;
+      width: 940px;
+    }
+
+    @media (max-width: 991.98px) {
+      top: 455px;
+      padding: 0 15px;
+      width: 90%;
+    }
+
+    @media (min-width: 400px) and (max-width: 575.98px) {
+      width: 100%;
+      left: 0;
+    }
+
+    @media (min-width: 320px) and (max-width: 399.98px) {
+      left: 0;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .luxury_title{
+      display: inline-block;
+      position: absolute;
+      top: 143px;
+      width: 214px;
+
+      @media (max-width: 991.98px) {
+        top: -160px;
+      }
+
+      h2{
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 58px;
+        color: #0C0B10;
+
+        @media (min-width: 400px) and (max-width: 575.98px) {
+          font-size: 50px;
+        }
+
+        @media (min-width: 320px) and (max-width: 399.98px) {
+          font-size: 43px;
+        }
+      }
+    }
+
+    .luxury_btn{
+      display: inline-block;
+      position: absolute;
+      top: 306px;
+      border: 1px solid #0C0B10;
+      border-radius: 61px;
+      transition: .5s ease-in-out;
+      z-index: 2;
+
+      @media (max-width: 991.98px) {
+        top: -100px;
+        right: 0;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px) {
+        margin-right: 10px;
+      }
+
+      button{
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #0C0B10;
+        padding: 13px 36px;
+        background: none;
+
+        @media (min-width: 320px) and (max-width: 399.98px) {
+          padding: 13px 20px;
+        }
+      }
+
+      &:hover{
+        background-color: #bec4be;
+        transform: scale(1.03);
+        transition: .5s ease-in-out;
+      }
+    }
+    .luxury_content{
+      position: relative;
+      height: 100%;
+
+
+      .img_wrap{
+        display: inline-block;
+        position: absolute;
+        height: 655px;
+        width: 350px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+
+        @media (min-width: 992px) and (max-width: 1269.98px) {
+          height: 545px;
+          width: 300px;
+        }
+
+        @media (max-width: 991.98px) {
+          position: static;
+        }
+
+        .luxury_img{
+          height: 100%;
+          width: 750px;
+
+          img{
+            height: 100%;
+          }
+        }
+      }
+
+      .img_wrap:nth-child(1) {
+        top: 675px;
+
+        @media (min-width: 992px) and (max-width: 1269.98px) {
+          top: 562px;
+        }
+
+        @media (max-width: 991.98px) {
+          top: 0;
+        }
+      }
+
+      .img_wrap:nth-child(2) {
+        bottom: 675px;
+        left: 370px;
+
+        @media (min-width: 992px) and (max-width: 1269.98px) {
+          left: 320px;
+        }
+
+        @media (max-width: 991.98px) {
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      .img_wrap:nth-child(5) {
+        bottom: 0;
+        left: 370px;
+
+        @media (min-width: 992px) and (max-width: 1269.98px) {
+          bottom: 110px;
+          left: 320px;
+        }
+
+        @media (max-width: 991.98px) {
+          left: 0;
+        }
+
+        .luxury_img {
+          position: absolute;
+          bottom: 0;
+          left: -93px;
+        }
+      }
+
+      .img_wrap:nth-child(3) {
+        right: 0;
+
+        .luxury_img{
+          position: absolute;
+          left: -173px;
+        }
+      }
+
+      .img_wrap:nth-child(4) {
+        top: 675px;
+        right: 0;
+
+        @media (min-width: 992px) and (max-width: 1269.98px) {
+          top: 562px;
+        }
+
+        @media (max-width: 991.98px) {
+          top: 0;
+        }
+      }
+
+      .img_wrap .title{
+        position: absolute;
+        height: 160px;
+        width: 225px;
+        z-index: 2;
+        @include position_center(-50%, 55%);
+
+        @media (max-width: 991.92px) {
+          @include position_center(-50%, 34%);
+        }
+
+        h2{
+          font-family: 'Forum', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 98.5%;
+          text-align: center;
+          color: #fff;
+
+          @media (max-width: 991.92px) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .luxury_gradient{
+        position: absolute;
+        top: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0B2034 100%);
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        height: 207px;
+        width: 100%;
+      }
+
+      .img_wrap:hover .luxury_gradient{
+        height: 100%;
+        transition: .4s ease-in;
+      }
+    }
+  }
+}
+
+@include slider_btn();
+
+.swiper-button-prev, .swiper-button-next{
+  @media (max-width: 575.98px) {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.swiper-button-prev{
+  @media (max-width: 575.98px) {
+    left: 20px;
+  }
+
+  &::after{
+    @media (max-width: 575.98px) {
+      transform: rotate(-135deg) translate(15px, 8px);
+    }
+  }
+}
+
+.swiper-button-next{
+  @media (max-width: 575.98px) {
+    right: 20px;
+  }
+
+  &::after{
+    @media (max-width: 575.98px) {
+      transform: rotate(45deg) translate(15px, 8px);
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .swiper-slide {
+    height: 475px !important;
+  }
+}
+

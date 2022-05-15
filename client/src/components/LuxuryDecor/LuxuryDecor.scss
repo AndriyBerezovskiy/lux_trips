@@ -1,0 +1,47 @@
+@import "../../mixins";
+
+.Luxury_decor1{
+  position: absolute;
+  bottom: 0;
+  @include position_center(-50%, -23%);
+
+  @media (max-width: 1269.98px) {
+    @include position_center(-50%, -4%);
+  }
+
+  .Luxury_decor2{
+    transform: rotate(-1deg);
+    height: 137px;
+    width: 63px;
+    position: absolute;
+    top: 79px;
+    left: 36px;
+
+    .Luxury_decor3{
+      background: rgba(145, 145, 145, 0.14);
+      backdrop-filter: blur(20px);
+      height: inherit;
+      transform: skew(23deg, -65deg);
+    }
+
+    .numbers{
+      position: absolute;
+      top: 16%;
+      left: 10%;
+      width: 53px;
+      font-family: 'Forum', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 98.5%;
+      text-align: center;
+      color: #FFFFFF;
+
+      span{
+        position: absolute;
+        left: 16px;
+        bottom: -34px;
+      }
+    }
+  }
+}

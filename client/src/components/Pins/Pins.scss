@@ -1,0 +1,52 @@
+.pins{
+  width: 100%;
+  height: 288px;
+
+  .vector{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.31);
+    backdrop-filter: blur(10px);
+    transform: rotate(90deg);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 52%);
+  }
+
+  .vector_1{
+    height: 43px;
+    width: 83px;
+    left: 62px;
+    top: 111px;
+  }
+
+  .vector_2{
+    height: 27px;
+    width: 52px;
+    left: 156px;
+    top: -47px;
+  }
+
+  .vector_3{
+    height: 112px;
+    width: 213px;
+    left: 608px;
+    top: 59px;
+
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+
+  .vector_4{
+    height: 26px;
+    width: 50px;
+    top: 19px;
+    right: 171px;
+  }
+
+  .vector_5{
+    height: 52px;
+    width: 100px;
+    top: 154px;
+    right: 199px;
+    z-index: 2;
+  }
+}

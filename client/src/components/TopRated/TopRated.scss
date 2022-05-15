@@ -1,0 +1,37 @@
+@import '../../mixins';
+
+.top_rated{
+  position: relative;
+  top: -70px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 690px;
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    top: 85px;
+  }
+
+  @media (max-width: 575.98px) {
+    top: 20px;
+  }
+
+  .title{
+    position: relative;
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 58px;
+    text-align: center;
+    color: #0C0B10;
+    height: 217px;
+    width: 540px;
+  }
+
+  .img{
+    position: absolute;
+    z-index: -1;
+    @include position_center(-50%, -18%);
+  }
+}

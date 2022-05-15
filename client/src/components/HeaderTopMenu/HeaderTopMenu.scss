@@ -1,0 +1,31 @@
+.header_top__menu{
+  display: flex;
+  gap: 40px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    gap: 25px;
+  }
+
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}
+
+.call{
+  position: relative;
+
+  .text{
+    right: 21%;
+    position: absolute;
+    top: 33%;
+  }
+
+  &:hover{
+    transform: scale(1.1);
+    transition: .5s ease-out;
+  }
+}

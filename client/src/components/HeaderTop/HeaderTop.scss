@@ -1,0 +1,108 @@
+@import '../../mixins';
+
+.header_top{
+  position: absolute;
+  width: 1348px;
+  height: 63.56px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include position_center(-50%, 0);
+
+  .burger_btn{
+    cursor: pointer;
+
+    span{
+      display: inline-block;
+      position: relative;
+      height: 2px;
+      width: 60px;
+      background-color: #fff;
+
+      @media (max-width: 575.98px) {
+        width: 45px;
+      }
+
+      &::before, &::after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        height: 2px;
+        width: 60px;
+        background-color: #fff;
+
+        @media (max-width: 575.98px) {
+          width: 45px;
+        }
+      }
+
+      &::before{
+        top: 15px;
+      }
+
+      &::after{
+        bottom: 15px;
+      }
+    }
+
+    @media (min-width: 991.98px) {
+      display: none;
+    }
+  }
+
+  .logo{
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      width: 95px;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 78px;
+    }
+  }
+
+  .call{
+    position: relative;
+
+    .call_back__top,{
+      position: absolute;
+      @include position_center(-50%, -56%);
+    }
+
+    .call_back__bottom{
+      position: absolute;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -44%) rotate(180deg);
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 10px;
+      width: 100px;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+    width: 1158px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    width: 963px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    width: 750px;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 555px;
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 575.98px) {
+    width: 85%;
+    flex-direction: row-reverse;
+  }
+}

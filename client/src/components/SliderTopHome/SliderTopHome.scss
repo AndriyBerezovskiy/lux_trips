@@ -1,0 +1,229 @@
+@import '../../mixins';
+
+.slider_wrap{
+  position: absolute;
+  width: 90%;
+  top: 250px;
+  padding-bottom: 50px;
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    top: 283px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    top: 290px;
+  }
+
+  @media (max-width: 575.98px) {
+    padding-right: 15px;
+    width: 100%;
+    top: 336px;
+  }
+
+    .swiper-slide{
+      height: 570px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        height: 475px;
+      }
+
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        height: 460px;
+      }
+
+      @media (min-width: 400px) and (max-width: 575.98px) {
+        height: 430px;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px) {
+        height: 380px;
+      }
+    }
+
+  .swiper-slide:hover .image .img_gradient{
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0B2034 85%);
+    transition: .4s ease-in-out;
+  }
+
+  .swiper-slide:hover .customise{
+    opacity: 1;
+    transition: .7s ease-in;
+  }
+
+  .slider{
+    width: 97%;
+    padding: 0 15px;
+
+    @media (min-width: 400px) and (max-width: 575.98px) {
+      width: 100%;
+    }
+
+    @media (min-width: 320px) and (max-width: 399.98px) {
+      padding: 0 5px;
+    }
+
+    .image{
+      width: 650px;
+      position: relative;
+      height: 100%;
+      border-radius: 10px;
+
+      img{
+        height: 100%;
+      }
+
+      .img_gradient{
+        position: absolute;
+        bottom: 0;
+        height: 355px;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0B2034 100%);
+      }
+
+      h1, h2{
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 98.5%;
+        color: #fff;
+      }
+
+      span{
+        display: block;
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .title_slider__top{
+        position: absolute;
+        bottom: 145px;
+        left: 34px;
+        width: 233px;
+
+        span{
+          display: flex;
+          gap: 5px;
+          font-size: 12px;
+          line-height: 16px;
+
+          &::before{
+            content: '';
+            display: block;
+            height: 16px;
+            width: 10px;
+            background: url('../../images/icon/icon_slider_top.svg') no-repeat;
+          }
+        }
+
+        h1{
+          font-size: 36px;
+        }
+      }
+
+      .price_slider__top{
+        position: absolute;
+        bottom: 37px;
+        left: 34px;
+
+        span{
+          font-size: 12px;
+          line-height: 16px;
+          text-transform: uppercase;
+        }
+
+        h2{
+          font-size: 24px;
+
+          @media (max-width: 767.98px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .customise{
+      position: absolute;
+      bottom: 36px;
+      left: 36%;
+      border: 1px solid #fff;
+      border-radius: 61px;
+      opacity: 0;
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        left: 38%;
+      }
+
+      @media (max-width: 767.98px) {
+        bottom: 58px;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px) {
+        left: 34%;
+        bottom: 64px;
+      }
+
+      h2{
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 10px 28px;
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          padding: 10px 24px;
+        }
+
+        @media (max-width: 767.98px) {
+          padding: 10px 12px;
+        }
+      }
+    }
+
+    @include slider_btn();
+
+     .swiper-button-prev, .swiper-button-next{
+       @media (max-width: 575.98px) {
+         height: 60px;
+         width: 60px;
+       }
+     }
+
+    .swiper-button-prev{
+      @media (max-width: 575.98px) {
+        left: 20px;
+      }
+
+      &::after{
+        @media (max-width: 575.98px) {
+          transform: rotate(-135deg) translate(15px, 8px);
+        }
+      }
+    }
+
+    .swiper-button-next{
+      @media (max-width: 575.98px) {
+        right: 20px;
+      }
+
+      &::after{
+        @media (max-width: 575.98px) {
+          transform: rotate(45deg) translate(15px, 8px);
+        }
+      }
+    }
+  }
+}

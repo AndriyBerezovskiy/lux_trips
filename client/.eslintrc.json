@@ -1,0 +1,61 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": false
+        },
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "import/prefer-default-export": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-indent-props": "off",
+        "react/function-component-definition": "off",
+        "import/order": "off",
+        "react/jsx-indent": "off",
+        "camelcase": "off",
+        "jsx-quotes": "off",
+        "no-tabs": "off",
+        "max-len": ["warn", { "code": 140 }],
+        "react/button-has-type": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-unused-vars": "off",
+        "no-param-reassign": "off",
+        "no-mixed-spaces-and-tabs": "off",
+        "import/no-unresolved": "off",
+        "react/jsx-first-prop-new-line": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "array-callback-return": "off",
+        "import/no-dynamic-require": "off",
+        "global-require": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    }
+}

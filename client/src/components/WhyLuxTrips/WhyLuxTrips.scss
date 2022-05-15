@@ -1,0 +1,263 @@
+@import '../../mixins';
+
+.why_wrap{
+  position: relative;
+  top: 355px;
+  height: 1800px;
+  overflow: hidden;
+
+  @media (min-width: 772px) and (max-width: 991.98px){
+    top: -220px;
+  }
+
+  .why_bg{
+    @media (max-width: 991.98px){
+      position: absolute;
+      width: max-content;
+    }
+
+    @media (min-width: 775px) and (max-width: 991.98px){
+      top: -3%;
+      left: -40%;
+    }
+
+    @media (min-width: 576px) and (max-width: 774.98px){
+      left: -75%;
+    }
+
+    @media (max-width: 575.98px) {
+      left: -83%;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .why_content{
+    position: absolute;
+    top: 33%;
+    height: 840px;
+    width: 642px;
+    @include position_center();
+
+    @media (min-width: 992px) and (max-width: 1199.98px){
+      top: 30%;
+      left: 45%;
+    }
+
+    @media (min-width: 775px) and (max-width: 991.98px) {
+      width: 592px;
+      top: 27%;
+    }
+
+    h2, h3{
+      position: absolute;
+      font-family: 'Forum', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #0C0B10;
+    }
+
+    span{
+      display: block;
+    }
+
+    h2{
+      font-size: 60px;
+      line-height: 58px;
+      width: 219px;
+
+      @media (min-width: 775px) and (max-width: 991.98px){
+        font-size: 50px;
+      }
+
+      @media (max-width: 774.98px){
+        text-align: center;
+        @include position_center();
+      }
+    }
+
+    .sub_title1{
+      bottom: 0;
+      width: 256px;
+      font-size: 40px;
+      line-height: 40px;
+
+      @media (min-width: 1441px) and (max-width: 1920px){
+        bottom: -127px;
+      }
+
+      @media (min-width: 775px) and (max-width: 991.98px){
+        font-size: 40px;
+      }
+
+      @media (max-width: 774.98px){
+        left: 16%;
+      }
+
+      @media (min-width: 400px) and (max-width: 575.98px){
+        left: 24%;
+        font-size: 36px;
+        bottom: -7%;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px){
+        left: 26%;
+        font-size: 35px;
+      }
+    }
+
+    .sub_title2{
+      height: 352px;
+      width: 322px;
+      bottom: -68%;
+      left: 42%;
+      font-size: 40px;
+      line-height: 40px;
+
+      @media (min-width: 1441px) and (max-width: 1920px){
+        bottom: -80%;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        left: 54%;
+      }
+
+      @media (min-width: 775px) and (max-width: 991.98px){
+        left: 58%;
+      }
+
+      @media (max-width: 774.98px){
+        font-size: 30px;
+        bottom: -92%;
+        left: 46%;
+      }
+
+      @media (min-width: 400px) and (max-width: 575.98px){
+        font-size: 23px;
+        line-height: 33px;
+        width: 170px;
+        bottom: -88%;
+        left: 51%;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px){
+        bottom: -84%;
+        left: 51%;
+        font-size: 25px;
+        line-height: 32px;
+        width: 150px;
+      }
+    }
+
+    .first_text, .second_text{
+      position: absolute;
+      width: 254px;
+      font-family: 'Manrope', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 179.8%;
+      color: #000000;
+
+      @media (min-width: 775px) and (max-width: 991.98px){
+        width: 207px;
+        font-size: 14px;
+      }
+    }
+
+    .first_text{
+      right: 0;
+
+      @media (max-width: 774.98px){
+        width: 83%;
+        @include position_center(-50%, 94%);
+      }
+
+      @media (min-width: 400px) and (max-width: 575.98px) {
+        width: 60%;
+        @include position_center(-50%, 98%);
+        font-size: 14px;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px) {
+        width: 48%;
+        @include position_center(-50%, 94%);
+        font-size: 14px;
+      }
+    }
+
+    .second_text{
+      right: 0;
+      bottom: 15px;
+
+      @media (min-width: 1441px) and (max-width: 1920px){
+        bottom: -127px;
+      }
+
+      @media (max-width: 774.98px){
+        bottom: -40%;
+        left: 46%;
+      }
+
+      @media (max-width: 575.98px) {
+        font-size: 14px;
+        bottom: -41%;
+        left: 51%;
+        width: 150px;
+      }
+    }
+
+    button{
+      position: absolute;
+      bottom: -68%;
+      left: 42%;
+      font-family: 'Forum', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0C0B10;
+      border: 1px solid #0C0B10;
+      border-radius: 61px;
+      padding: 11px 30px;
+      background: none;
+
+      &:hover{
+        background-color: #e7ccc3;
+        transform: scale(1.03);
+        transition: .5s ease-in-out;
+      }
+
+      @media (min-width: 1441px) and (max-width: 1920px){
+        bottom: -80%;
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        left: 54%;
+      }
+
+      @media (min-width: 775px) and (max-width: 991.98px){
+        left: 58%;
+      }
+
+      @media (max-width: 774.98px){
+        width: 86%;
+        bottom: -90%;
+        @include position_center();
+      }
+
+      @media (min-width: 400px) and (max-width: 575.98px) {
+        width: 60%;
+      }
+
+      @media (min-width: 320px) and (max-width: 399.98px) {
+        width: 40%;
+      }
+    }
+  }
+}
