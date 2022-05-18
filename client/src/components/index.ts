@@ -7,7 +7,6 @@ export * from './HomeSelect/HomeSelect';
 export * from './Decor/Decor';
 export * from './Hamburger/Hamburger';
 export * from './TopRated/TopRated';
-export * from './TopRatedMenu/TopRatedMenu';
 export * from './Rating/Rating';
 export * from './SliderTopHome/SliderTopHome';
 export * from './LuxuryPackages/LuxuryPackages';

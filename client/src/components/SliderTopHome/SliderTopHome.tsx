@@ -1,10 +1,11 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { RootState } from '../../store';
 import { getAllTour } from '../../store/slice/tour.slice';
+import { top_rated__menu } from '../../constans';
 import { Rating } from '../index';
 
 import 'swiper/scss';
@@ -12,6 +13,7 @@ import 'swiper/scss/navigation';
 import './SliderTopHome.scss';
 
 const SliderTopHome: FC = () => {
+    const [idWorld, setIdWorld] = useState(0);
     const { tours } = useAppSelector((state: RootState) => state.tourReducer);
     const dispatch = useAppDispatch();
 
@@ -19,8 +21,23 @@ const SliderTopHome: FC = () => {
         dispatch(getAllTour());
     }, []);
 
+    let filtered = tours;
+
+    if (idWorld !== 0) {
+        filtered = tours.filter((tour) => tour.country.worldId.toString().includes(idWorld.toString()));
+    }
+
     return (
         <div className='slider_wrap'>
+            <div className='top_rated__menu'>
+                {
+                    top_rated__menu.map((value) => (
+                        <button key={value.id} onClick={() => setIdWorld(value.id)}>
+                            {value.name}
+                        </button>
+                    ))
+                }
+            </div>
             <Swiper
                 className='slider'
                 modules={[Navigation]}
@@ -53,7 +70,7 @@ const SliderTopHome: FC = () => {
                 }}
             >
                 {
-                    tours.map((tour) => (
+                    filtered.map((tour) => (
                         <SwiperSlide key={tour.id}>
 
                             <div className='image'>

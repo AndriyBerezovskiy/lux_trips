@@ -10,7 +10,7 @@ const HeaderTopMenu:FC = () => (
         {
             header_top__menu.map((value) => (
                 <div key={value}>
-                    <Link to={`${value.replaceAll(' ', '').toLowerCase()}`}>
+                    <Link to={`${value.replaceAll(' ', '_').toLowerCase()}`}>
                         {value}
                     </Link>
                 </div>
