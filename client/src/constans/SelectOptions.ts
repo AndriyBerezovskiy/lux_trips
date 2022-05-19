@@ -1,19 +1,19 @@
 import { IOptions } from '../components';
 
 export const options_destination: IOptions[] = [{
-    value: 'machu-picchu',
-    label: 'Machu Picchu',
-}, {
-    value: 'winter-park-ski-holiday',
-    label: 'Winter Park Ski Holiday',
-}, {
-    value: 'hvar',
-    label: 'Hvar',
+    value: '#',
+    label: '#',
 }];
 
 export const options_travel_type: IOptions[] = [{
     value: 'adventure-travel',
     label: 'Adventure Travel',
+}, {
+    value: 'romantic-travel',
+    label: 'Romantic Travel',
+}, {
+    value: 'extreme-travel',
+    label: 'Extreme Travel',
 }];
 
 export const options_travellers: IOptions[] = [{

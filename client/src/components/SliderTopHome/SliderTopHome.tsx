@@ -21,10 +21,10 @@ const SliderTopHome: FC = () => {
         dispatch(getAllTour());
     }, []);
 
-    let filtered = tours;
+    let filteredTours = tours;
 
     if (idWorld !== 0) {
-        filtered = tours.filter((tour) => tour.country.worldId.toString().includes(idWorld.toString()));
+        filteredTours = tours.filter((tour) => tour.country.worldId.toString().includes(idWorld.toString()));
     }
 
     return (
@@ -70,7 +70,7 @@ const SliderTopHome: FC = () => {
                 }}
             >
                 {
-                    filtered.map((tour) => (
+                    filteredTours.map((tour) => (
                         <SwiperSlide key={tour.id}>
 
                             <div className='image'>
