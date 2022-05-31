@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import {
+    CustomersReviews,
+    CustomiseTripInfo,
     Hero, LuxuryPackages, Service, TopRated, WhyLuxTrips,
 } from '../../components';
 
@@ -12,6 +14,8 @@ const Home: FC = () => (
         <LuxuryPackages />
         <Service />
         <WhyLuxTrips />
+        <CustomiseTripInfo />
+        <CustomersReviews />
     </div>
 );
 

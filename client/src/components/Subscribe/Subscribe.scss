@@ -1,0 +1,137 @@
+@import '../../mixins';
+
+.subscribe_wrap, .subscribe{
+  position: absolute;
+  bottom: -50%;
+  height: 565px;
+  width: 1110px;
+  @include position_center();
+
+  @media (min-width: 992px) and (max-width: 1199.98px){
+    width: 960px;
+    bottom: -417px;
+  }
+
+  .subscribe{
+    overflow: hidden;
+    z-index: 2;
+
+    .subscribe_bg{
+      position: absolute;
+      top: -22%;
+      width: max-content;
+
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        left: -2%;
+        bottom: -530px;
+      }
+    }
+
+    .subscribe_content{
+      position: absolute;
+      top: 94px;
+      left: 185px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 212px;
+      width: 520px;
+
+      h2, p{
+        font-style: normal;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      h2{
+        font-family: 'Forum', sans-serif;
+        font-size: 60px;
+        line-height: 58px;
+      }
+
+      p{
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        line-height: 179.8%;
+      }
+    }
+
+    .form_subscribe{
+      position: absolute;
+      bottom: 134px;
+      left: 185px;
+
+      form{
+        display: flex;
+      }
+
+      input{
+        height: 55px;
+        width: 486px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid #fff;
+        backdrop-filter: blur(20px);
+        border-radius: 95px;
+        padding-left: 30px;
+
+        &::placeholder{
+          font-family: 'Manrope', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 179.8%;
+          color: #0C0B10;
+        }
+      }
+
+      .subscribe_btn{
+        position: absolute;
+        right: -50%;
+
+        button{
+          height: 55px;
+          width: 330px;
+          font-family: 'Forum', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 26px;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #0C0B10;
+          background: #fff;
+          border-radius: 74px;
+        }
+      }
+    }
+  }
+
+  .subscribe_svg{
+    position: absolute;
+    bottom: -58%;
+    z-index: 1;
+    @include position_center(-49%, -50%);
+
+    @media (min-width: 992px) and (max-width: 1199.98px){
+      bottom: -76%;
+    }
+
+    svg{
+      width: 98%;
+    }
+
+    .subscribe_decor{
+      position: absolute;
+      top: -4px;
+      @include position_center(-45%, -50%);
+
+      @media (min-width: 992px) and (max-width: 1199.98px){
+        top: 27px;
+        left: 49%;
+        @include position_center(-69%, -50%);
+      }
+    }
+  }
+
+}

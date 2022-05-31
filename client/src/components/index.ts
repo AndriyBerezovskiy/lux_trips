@@ -15,3 +15,6 @@ export * from './LuxuryImgWrap/LuxuryImgWrap';
 export * from './Service/Service';
 export * from './WhyLuxTrips/WhyLuxTrips';
 export * from './PinsWhyLuxTrips/PinsWhyLuxTrips';
+export * from './CustomiseTripInfo/CustomiseTripInfo';
+export * from './Subscribe/Subscribe';
+export * from './CustomersReviews/CustomersReviews';

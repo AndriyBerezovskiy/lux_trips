@@ -62,6 +62,7 @@ const HomeSelect:FC = () => {
                     selected={startDate}
                     onChange={(date:Date) => setStartDate(date)}
                     dateFormat='d MMMM yyyy'
+                    popperPlacement="top"
                 />
             </div>
 

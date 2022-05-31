@@ -5,6 +5,7 @@
   top: 355px;
   height: 1800px;
   overflow: hidden;
+  z-index: 2;
 
   @media (min-width: 772px) and (max-width: 991.98px){
     top: -220px;
@@ -259,5 +260,13 @@
         width: 40%;
       }
     }
+  }
+
+  .cloud{
+    position: absolute;
+    left: -6%;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-22deg);
   }
 }
